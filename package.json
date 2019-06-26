@@ -27,5 +27,9 @@
   },
   "categories": [
     "Snippets"
-  ]
+  ],
+  "publisher": "balraj-99",
+  "engines": {
+    "vscode": "^1.22.0"
+  }
 }

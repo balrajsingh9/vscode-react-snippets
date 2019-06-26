@@ -1,0 +1,31 @@
+{
+  "name": "react-snippets",
+  "version": "1.0.0",
+  "description": "Snippets for React.js--only for Javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "vscode",
+    "snippets",
+    "react"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dexter-69/vscode-react-snippets.git"
+  },
+  "author": "dexter-69",
+  "license": "MIT",
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets.json"
+      }
+    ]
+  },
+  "categories": [
+    "Snippets"
+  ]
+}

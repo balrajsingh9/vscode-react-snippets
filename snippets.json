@@ -1,0 +1,84 @@
+{
+    "Create function component": {
+        "prefix": "fc",
+        "body": [
+            "import React from 'react';\n",
+            "const propTypes = {",
+            "};\n",
+            "const defaultProps = {",
+            "};\n",
+            "const ${1:ComponentName} = (${2:props}) => {",
+            "\tconst {",
+            "\t\t${3:someProp}",
+            "\t} = ${2:props};\n",
+            "\treturn (",
+            "\t\t$0",
+            "\t);",
+            "};\n",
+            "${1:ComponentName}.propTypes = propTypes;\n",
+            "${1:ComponentName}.defaultProps = defaultProps;\n",
+            "export default ${1:ComponentName};"
+        ],
+        "description": "Create a function component"
+    },
+    "Create multiline comment": {
+        "prefix": "cm",
+        "body": "/**\n * ${1:Start Commenting}\n */",
+        "description": "Creates multiline comment"
+    },
+    "Create Story Template": {
+        "prefix": "bst",
+        "body": [
+            "import React from 'react'",
+            "import { storiesOf } from '@storybook/react';",
+            "import { withPropsTable } from 'storybook-addon-react-docgen';",
+            "import { MuiThemeProvider } from '@material-ui/core/styles';",
+            "import ${1:READMEFILE} from './README/${1:READMEFILE}.md';\n",
+            "storiesOf('${2:ComponentName}', module)",
+            "\t.addDecorator(withPropsTable)",
+            "\t.addParameters({",
+            "\t\tprops: {",
+            "\t\t\tpropTables: [${3:}],",
+            "\t\t\tpropTablesExclude: [",
+            "\t\t\t\t'MuiThemeProviderOld',\n\t\t\t\t'Story'",
+            "\t\t\t],",
+            "\t\t},",
+            "\t\treadme: {",
+            "\t\t\tsidebar: ${1:READMEFILE},",
+            "\t\t},",
+            "\t})",
+            "\t.add('${5:StoryName}', () => {",
+            "\t\treturn (",
+            "\t\t\t<MuiThemeProvider theme={theme}>",
+            "\t\t\t\t${0:}",
+            "\t\t\t</MuiThemeProvider>",
+            "\t\t)",
+            "\t});"
+        ]
+    },
+    "Class Component": {
+        "prefix": "cc",
+        "body": [
+            "import React from 'react';\n",
+            "const propTypes = {",
+            "};\n",
+            "const defaultProps = {",
+            "};\n",
+            "class ${1:ComponentName} extends React.Component {",
+            "\tconstructor(props) {",
+            "\tsuper(props);\n",
+            "\tthis.state = {};\n\t}",
+            "\trender() {",
+            "\t\tconst {",
+            "\t\t\t${2:someProp}",
+            "\t\t} = this.props;\n",
+            "\t\treturn (",
+            "\t\t\t$0",
+            "\t\t);",
+            "\t};\n}\n",
+            "${1:ComponentName}.propTypes = propTypes;",
+            "${1:ComponentName}.defaultProps = defaultProps;\n",
+            "export default ${1:ComponentName};"
+        ]
+    }
+}
